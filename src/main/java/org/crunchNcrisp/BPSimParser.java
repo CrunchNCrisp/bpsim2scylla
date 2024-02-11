@@ -1,31 +1,30 @@
 package org.crunchNcrisp;
 
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.JDOMException;
-import org.jdom2.input.SAXBuilder;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+import org.crunchNcrisp.xml.bpsim.custom.Definitions;
+import org.crunchNcrisp.xml.bpsim.generated.BPSimData;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class BPSimParser {
 
-    private static final Logger LOGGER = Logger.getLogger(BPSimParser.class.getName());
+    public static BPSimData readFileWithoutWrapper(File bpsimFile) throws JAXBException {
 
-    public static void parseFile(File bpsimFile) {
-        try {
-           Document document = new SAXBuilder().build(bpsimFile);
+          JAXBContext context = JAXBContext.newInstance(BPSimData.class);
+          Unmarshaller unmarshaller = context.createUnmarshaller();
 
-           Element rootElement = document.getRootElement();
-
-            LOGGER.log(Level.INFO, "Root Element Name: {0}", rootElement.getName());
-
-            // todo: add parsing logic
-
-        } catch (JDOMException | IOException e) {
-            LOGGER.log(Level.SEVERE, e.getMessage());
-        }
+          return (BPSimData) unmarshaller.unmarshal(bpsimFile);
     }
+
+  public static BPSimData readFileWithWrapper(File bpsimFile) throws JAXBException {
+
+    JAXBContext context = JAXBContext.newInstance(Definitions.class);
+    Unmarshaller unmarshaller = context.createUnmarshaller();
+    Definitions bpsimDataWrapper = (Definitions) unmarshaller.unmarshal(bpsimFile);
+
+    // Access the BPSimData
+    return bpsimDataWrapper.getRelationship().getExtensionElements().getBpsimData();
+  }
 }

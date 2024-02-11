@@ -1,5 +1,8 @@
 package org.crunchNcrisp;
 
+import javax.xml.bind.JAXBException;
+import lombok.SneakyThrows;
+import org.crunchNcrisp.xml.bpsim.generated.BPSimData;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -10,12 +13,28 @@ import static org.junit.jupiter.api.Assertions.*;
 class BPSimParserTest {
 
     @Test
-    void parseFile() {
+    @SneakyThrows
+    void bpsimFileWithoutWrapperCanBeUnmarshalled() {
+        assertNotNull(getNonWrappedBPSIMData());
+    }
 
-        URL resourceUrl = getClass().getClassLoader().getResource("BPSim.xml"); // Replace with your actual file name
-        assertNotNull(resourceUrl, "Could not find resource");
+    @Test
+    @SneakyThrows
+    void bpsimFileWithWrapperCanBeUnmarshalled() {
+        assertNotNull(getWrappedBPSIMData());
+    }
 
+    BPSimData getWrappedBPSIMData() throws JAXBException {
+        URL resourceUrlWrapped = getClass().getClassLoader().getResource(
+            "BPSIM_Wrapped.xml");
+        File bpsimFileWrapped = new File(resourceUrlWrapped.getFile());
+        return BPSimParser.readFileWithWrapper(bpsimFileWrapped);
+    }
+
+    BPSimData getNonWrappedBPSIMData() throws JAXBException {
+        URL resourceUrl = getClass().getClassLoader().getResource(
+            "BPSIM_Extracted.xml");
         File bpsimFile = new File(resourceUrl.getFile());
-        BPSimParser.parseFile(bpsimFile);
+        return BPSimParser.readFileWithoutWrapper(bpsimFile);
     }
 }

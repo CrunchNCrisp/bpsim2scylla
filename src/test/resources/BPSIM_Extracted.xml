@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+      <bpsim:BPSimData xmlns:bpsim="http://www.bpsim.org/schemas/2.0">
+        <bpsim:Scenario id="S" name="Scenario" author="Claudia" description="This is a scenario">
+          <bpsim:ScenarioParameters replication="1" baseTimeUnit="min">
+            <bpsim:Start>
+              <bpsim:DateTimeParameter value="2021-10-01T00:00:00"/>
+            </bpsim:Start>
+            <bpsim:Duration>
+              <bpsim:DurationParameter value="P300D"/>
+            </bpsim:Duration>
+            <bpsim:Warmup>
+              <bpsim:DurationParameter value="P1D"/>
+            </bpsim:Warmup>
+          </bpsim:ScenarioParameters>
+          <bpsim:ElementParameters elementRef="startEvents_3414b2b3-dcb9-147f-92a3-bee2498031e2">
+            <bpsim:ControlParameters>
+              <bpsim:InterTriggerTimer>
+                <bpsim:StringParameter value="300"/>
+                <bpsim:NegativeExponentialDistribution mean="11" validFor="Case Arrival Calendar"/>
+              </bpsim:InterTriggerTimer>
+              <bpsim:TriggerCount>
+                <bpsim:NumericParameter value="3000"/>
+              </bpsim:TriggerCount>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.56"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.44"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.69"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.31"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.68"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.32"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.22"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.19"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.59"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role0">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="53" validFor="4"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role1">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="9" validFor="1"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role2">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="58" validFor="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role3">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="59" validFor="3"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role4">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="1" validFor="2"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role5">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="49" validFor="2"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_219c0383-7c8f-583b-afed-d89b511f41db">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="4390.75" standardDeviation="621" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role2',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_6a7ba182-b672-925c-39db-48f9580c475b">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="137" standardDeviation="22.72" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="130" standardDeviation="15" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_98da5344-ab55-ad60-825a-6ca407695b6b">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="0.02"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role4',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="4.25"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role5',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NegativeExponentialDistribution mean="807.34"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role3',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="125.9" standardDeviation="27.8" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="0.02"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role4',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_14660ced-208d-9189-076d-bf98985f0993">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NegativeExponentialDistribution mean="529"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role0',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_9980786c-add3-523c-4b33-7269dba7747f">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="6.21"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role0',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:Calendar name="Case Arrival Calendar" id="Case Arrival Calendar">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T230000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="0" id="0">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T200000
+DTSTART:20211001T090000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,TU,MO,TH,WE,FR,SU
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="1" id="1">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T160000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=TH,MO,FR,TU,WE
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="2" id="2">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T230000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,MO,SU,TU,WE,TH,FR
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="3" id="3">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T220000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,TH,MO,FR,TU,WE
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="4" id="4">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T200000
+DTSTART:20211001T090000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,MO,TU,TH,WE,FR
+END:VCALENDAR
+</bpsim:Calendar>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
